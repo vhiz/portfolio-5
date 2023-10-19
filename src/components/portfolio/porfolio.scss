@@ -1,0 +1,145 @@
+@import "../../mobile.scss";
+.portfolio {
+  position: relative;
+  .progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    text-align: center;
+    color: orange;
+    font-size: 36px;
+    @include small-screen {
+      padding-top: calc(100vh - 100px);
+      font-size: 30px;
+    }
+    @include ipad-only {
+      padding-top: calc(100vh - 100px);
+      font-size: 30px;
+    }
+    @include mobile-only {
+      padding-top: calc(100vh - 100px);
+      font-size: 20px;
+    }
+
+    .progressBar {
+      height: 5px;
+      background-color: white;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .wrapper {
+      max-width: 1200px;
+      margin: auto;
+      height: 100%;
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      justify-content: center;
+
+      @include small-screen {
+        flex-direction: column;
+        gap: 20px;
+      }
+      @include ipad-only {
+        flex-direction: column;
+        gap: 20px;
+      }
+      @include mobile-only {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .imgContainer {
+        flex: 1;
+        height: 50%;
+        @include small-screen {
+          width: 100%;
+          max-height: 400px;
+          margin-top: 160px;
+        }
+        @include ipad-only {
+          width: 100%;
+          max-height: 400px;
+          margin-top: 70px;
+        }
+        @include mobile-only {
+          width: 100%;
+          max-height: 300px;
+        }
+        img {
+          border-radius: 10px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          @include big-screen {
+            margin-left: 10px;
+          }
+          @include small-screen {
+            object-fit: contain;
+          }
+          @include ipad-only {
+            object-fit: contain;
+          }
+          @include mobile-only {
+            object-fit: contain;
+          }
+        }
+      }
+
+      .textContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include small-screen {
+          transform: none !important;
+          align-items: center;
+          text-align: center;
+        }
+        @include ipad-only {
+          transform: none !important;
+          align-items: center;
+          text-align: center;
+          padding: 10px;
+        }
+        @include mobile-only {
+          transform: none !important;
+          align-items: center;
+          text-align: center;
+          padding: 10px;
+        }
+        h2 {
+          font-size: 72px;
+          @include mobile-only {
+            font-size: 36px;
+          }
+        }
+        p {
+          color: gray;
+          font-size: 20px;
+          @include mobile-only {
+            font-size: 18px;
+          }
+        }
+
+        button {
+          background-color: orange;
+          border-radius: 10px;
+          border: none;
+          padding: 10px;
+          width: 200px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

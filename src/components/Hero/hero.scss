@@ -1,0 +1,140 @@
+@import "../../mobile.scss";
+
+.hero {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  background: linear-gradient(180deg, #111111, #1b1b1b);
+  position: relative;
+
+  .wrapper {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+
+    .textContainer {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+      width: 50%;
+
+      @include big-screen{
+        margin-left: 10px;
+      }
+
+      @include small-screen {
+        height: 60%;
+        width: 100%;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+      }
+      @include ipad-only {
+        height: 60%;
+        width: 100%;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+      }
+      @include mobile-only {
+        height: 50%;
+        width: 100%;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+      }
+      h2 {
+        font-size: 30px;
+        color: #fdc93a;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: 88px;
+      
+        @include small-screen {
+          font-size: 60px;
+        }
+        @include ipad-only {
+          font-size: 60px;
+        }
+        @include mobile-only {
+          font-size: 30px;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        gap: 10px;
+        button {
+          border-radius: 10px;
+          padding: 20px;
+          border: 1px solid white;
+          background-color: transparent;
+          color: white;
+          cursor: pointer;
+          font-weight: 300;
+        }
+      }
+      img {
+        width: 30px;
+      }
+    }
+
+    .slidingTextContainer {
+      position: absolute;
+      font-size: 50vh;
+      bottom: -120px;
+      white-space: nowrap;
+      color: #ffffff09;
+      width: 50%;
+      font-weight: bold;
+    }
+
+    .imageContainer {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @include small-screen {
+        height: 60%;
+        width: 200px;
+        top: unset;
+        bottom: 0;
+        right: unset;
+      }
+      @include ipad-only {
+        height: 60%;
+        width: 200px;
+        top: unset;
+        bottom: 0;
+        right: unset;
+      }
+      @include mobile-only {
+        height: 50%;
+        width: 100px;
+        top: unset;
+        bottom: 0;
+        right: unset;
+      }
+      img {
+        width: 600px;
+        height: 115%;
+        object-fit: cover;
+
+        @include small-screen {
+          width: 800px
+        }
+        @include ipad-only {
+          width: 700px
+        }
+        @include mobile-only {
+          width: 350px
+        }
+      }
+    }
+  }
+}
